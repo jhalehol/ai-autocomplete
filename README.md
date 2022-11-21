@@ -1,6 +1,6 @@
 # Compose.AI Backend Engineer Takehome Test
 The instructions for this test can be found at https://docs.google.com/document/d/13pKrfrBF0-PRGc16JMT6QRjinOiDnbaf7XU5rnJ5GzE .
-This repository serves as a convenient skeleton to start building your app.  It includes a Dockerfile, build scripts, test setup, and hello-world CLI application.  You will be responsible for converting this into a containerized python server that can respond to REST requests as described in the test outline.  Please make your own copy of this repo, and don't publish it to any public accounts.
+This repository serves as a convenient skeleton to start building your app.  It includes a Dockerfile, build scripts, test setup, dictionary, and hello-world CLI application.  You will be responsible for converting this into a containerized python server that can respond to REST requests as described in the test outline.  Please make your own copy of this repo, and don't publish it to any public accounts.
 
 This skeleton was adapted from https://github.com/mozilla/generic-python-docker .
 
