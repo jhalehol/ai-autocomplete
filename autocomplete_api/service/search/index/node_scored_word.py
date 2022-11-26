@@ -1,4 +1,4 @@
-from .scored_word import ScoredWord
+from autocomplete_api.model.models import ScoredWord
 
 
 class NodeScoredWord:

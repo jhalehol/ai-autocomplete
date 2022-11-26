@@ -1,6 +1,6 @@
 import pytest
 
-from autocomplete_api.service.search.model.word_predictor import WordPredictor
+from autocomplete_api.service.search.index.word_predictor import WordPredictor
 from tests.util.test_utils import load_json_data
 from tests.common.constants import *
 

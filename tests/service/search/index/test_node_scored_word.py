@@ -1,7 +1,7 @@
 import pytest
 
-from autocomplete_api.service.search.model.node_scored_word import NodeScoredWord
-from autocomplete_api.service.search.model.scored_word import ScoredWord
+from autocomplete_api.service.search.index.node_scored_word import NodeScoredWord
+from autocomplete_api.model.models import ScoredWord
 
 
 WORD_TESTED = 'word'
