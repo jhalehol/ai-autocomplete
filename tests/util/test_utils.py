@@ -17,4 +17,8 @@ def load_json_data(file_name: str):
 
 
 def build_resource_absolute_path(file_name: str) -> str:
-    return os.path.join(os.path.dirname(__file__), '../data/' + file_name)
+    return os.path.join(get_resource_absolute_path(), file_name)
+
+
+def get_resource_absolute_path() -> str:
+    return os.path.join(os.path.dirname(__file__), '../data')
