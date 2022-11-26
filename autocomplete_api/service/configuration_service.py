@@ -2,7 +2,7 @@ import configparser as config_reader
 import logging
 from os import path
 
-from autocomplete_api.model.models import ApplicationConfiguration    
+from model.models import ApplicationConfiguration    
 
 CONFIGURATION_FILE = 'application.properties'
 LANGUAGES_SECTION = 'Languages'

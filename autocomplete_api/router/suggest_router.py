@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException
 import logging
 
-import autocomplete_api.context as context
-from autocomplete_api.exception.configuration_exception import ConfigurationException
-from autocomplete_api.exception.forbidden_exception import ForbiddenException 
+import context as context
+from exception.configuration_exception import ConfigurationException
+from exception.forbidden_exception import ForbiddenException 
 
 tags_metadata = [
     {

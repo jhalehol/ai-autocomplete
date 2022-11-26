@@ -1,5 +1,5 @@
 from .node_scored_word import NodeScoredWord
-from autocomplete_api.model.models import ScoredWord
+from model.models import ScoredWord
 
 
 SCORE_FIELD = 'score'

@@ -4,19 +4,15 @@ import logging
 import os
 from fastapi import FastAPI
 
-from pathlib import Path
-modules_path = Path(__file__).absolute().parent.parent
-print(modules_path)
-sys.path.append(str(modules_path))
-
-from autocomplete_api.router.suggest_router import router as suggestions_router
-from autocomplete_api.service.configuration_service import ConfigurationService
-from autocomplete_api.service.search.search_service import SearchService
-import autocomplete_api.context as context
+from router.suggest_router import router as suggestions_router
+from service.configuration_service import ConfigurationService
+from service.search.search_service import SearchService
+import context
 
 logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 logger = logging.getLogger()
 path_base = os.path.dirname(__file__)
+
 
 app = FastAPI(title="Autocomplete Application", description="Endpoints provided for autocomplete operations", version="1.0")
 

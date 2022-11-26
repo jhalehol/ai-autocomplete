@@ -2,10 +2,10 @@ import json
 import os
 import logging
 
-from autocomplete_api.model.models import ApplicationConfiguration
-from autocomplete_api.exception.configuration_exception import ConfigurationException
-from autocomplete_api.service.search.index.word_predictor import WordPredictor
-from autocomplete_api.exception.forbidden_exception import ForbiddenException
+from model.models import ApplicationConfiguration
+from exception.configuration_exception import ConfigurationException
+from service.search.index.word_predictor import WordPredictor
+from exception.forbidden_exception import ForbiddenException
 
 
 class SearchService:
