@@ -5,6 +5,13 @@ import autocomplete_api.context as context
 from autocomplete_api.exception.configuration_exception import ConfigurationException
 from autocomplete_api.exception.forbidden_exception import ForbiddenException 
 
+tags_metadata = [
+    {
+        "name": "suggestions",
+        "description": "Generates suggestions for autocomplete operations with prefix data",
+    },
+]
+
 router = APIRouter(
     prefix = "/suggest",
     tags = ["suggestions"],
@@ -16,7 +23,7 @@ router = APIRouter(
 __LOGGER = logging.getLogger(__name__)
 
 
-@router.get("/")
+@router.get("/", summary="Return an array of suggestions given the prefix, if limit is not provided will use as limit the default configuration")
 def get_suggestions(prefix: str, limit: int = None):
     try:
         result: list = context.search_service.search(prefix, limit)
