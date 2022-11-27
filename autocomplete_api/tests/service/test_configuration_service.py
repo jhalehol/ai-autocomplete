@@ -1,7 +1,7 @@
 import pytest
 
-from autocomplete_api.service.configuration_service import ConfigurationService
-from autocomplete_api.model.models import ApplicationConfiguration
+from service.configuration_service import ConfigurationService
+from model.models import ApplicationConfiguration
 from tests.util.test_utils import get_resource_absolute_path
 
 
