@@ -23,15 +23,17 @@ Python3 is required, to run and test the application locally we suggest to use a
 pip install -r requirements/requirements.txt
 ```
 
-* Running application (From the folder `autocomplete_api`)
+* Running application (From the `autocomplete_api` path)
 
 ```
 uvicorn app:app --reload --port 9000
 ```
 
-You can access swagger documentation for the API from `http://localhost:9000/docs`
+Or running from `root path` through the script `./run.sh`
 
-### Running tests 
+Then you can access swagger documentation for the API from `http://localhost:9000/docs`
+
+### Running tests (`From root path`)
 
 Using script will create/activate python environment and will install dependencies required for tests 
 
