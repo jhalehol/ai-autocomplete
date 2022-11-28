@@ -1,6 +1,6 @@
 #! /usr/local/bin/bash
 
-URL='http://localhost:8000/suggest?prefix=a&limit=100'
+URL='http://localhost:9000/suggest?prefix=a&limit=100'
 
 echo "Request output:"
 curl -X GET "${URL}"
