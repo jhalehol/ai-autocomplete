@@ -1,43 +1,19 @@
-FROM python:3
-MAINTAINER Frank Bertsch <frank@mozilla.com>
+FROM python:3.9
 
-ARG APP_NAME=autocomplete_api
-ENV APP_NAME=${APP_NAME}
+EXPOSE 9000
 
-# Guidelines here: https://github.com/mozilla-services/Dockerflow/blob/master/docs/building-container.md
-ARG USER_ID="10001"
-ARG GROUP_ID="app"
-ARG HOME_ARG="/app"
+WORKDIR /app
 
-ENV HOME=${HOME_ARG}/${APP_NAME}
-RUN groupadd --gid ${USER_ID} ${GROUP_ID} && \
-    useradd --create-home --uid ${USER_ID} --gid ${GROUP_ID} --home-dir /app ${GROUP_ID}
+COPY ./requirements/requirements.txt /app/
 
-# List packages here
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        file        \
-        gcc         \
-        libwww-perl && \
-    apt-get autoremove -y && \
-    apt-get clean
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-# Upgrade pip
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
-WORKDIR ${HOME}
+COPY autocomplete_api/ /app/
+COPY bin/entrypoint /app/entrypoint
 
-ADD requirements requirements/
-RUN pip install -r requirements/requirements.txt
-RUN pip install -r requirements/test_requirements.txt
-
-ADD . ${HOME}
-ENV PATH $PATH:${HOME}/bin
-
-#RUN pip install -e ${HOME}/${APP_NAME}
-
-# Drop root and change ownership of the application folder to the user
-RUN chown -R ${USER_ID}:${GROUP_ID} ${HOME}
-USER ${USER_ID}
-
-ENTRYPOINT ["entrypoint"]
+CMD ["/app/entrypoint"]

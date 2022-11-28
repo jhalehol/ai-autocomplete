@@ -1,0 +1,46 @@
+[
+    {
+        "word": "fry",
+        "score": 3
+    },
+    {
+        "word": "fries",
+        "score": 5
+    },
+    {
+        "word": "free",
+        "score": 5
+    },
+    {
+        "word": "freedom",
+        "score": 3
+    },
+    {
+        "word": "freeze",
+        "score": 1
+    },
+    {
+        "word": "frequency",
+        "score": 2
+    },
+    {
+        "word": "fresh",
+        "score": 2
+    },
+    {
+        "word": "wild",
+        "score": 5
+    },
+    {
+        "word": "wish",
+        "score": 3
+    },
+    {
+        "word": "octopus",
+        "score": 1
+    },
+    {
+        "word": "the",
+        "score": 5
+    }
+]

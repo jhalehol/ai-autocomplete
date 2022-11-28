@@ -1,11 +1,8 @@
 version: '2'
-
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    restart: "no"
-    command: "true"
+    image: autocomplete:latest
     environment:
-      - GCLOUD_SERVICE_KEY
+      APP_PORT: 9000
+    ports:
+      - 9000:9000
